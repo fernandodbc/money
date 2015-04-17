@@ -1,0 +1,1 @@
+Ressources statiques (polices, images, etc) vont dans le dossier /public.
