@@ -1,7 +1,10 @@
 <template name="accountRowsList">
-  <div class="account-rows">
-    {{#each accountRows}}
-      {{> accountRow}}
-    {{/each}}
-  </div>
+    <div class="account-rows">
+        <h1>{{bank.name}}</h1>
+        <span>{{bank.account.name}}</span>
+        <span>{{bank.account.number}}</span>
+        {{#each accountRows}}
+            {{> accountRow}}
+        {{/each}}
+    </div>
 </template>

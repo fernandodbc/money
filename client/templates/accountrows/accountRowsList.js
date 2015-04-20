@@ -12,6 +12,14 @@ var accountRowsData = [
         url: 'http://themeteorbook.com'
     }
 ];
+
 Template.accountRowsList.helpers({
-    accountRows: accountRowsData
+    accountRows: accountRowsData,
+    bank: { 
+        name : "Boursorama",
+        account: {
+            number : "02343534534",
+            name : "Livret A"
+        }
+    }
 });
