@@ -3,8 +3,21 @@
         <h1>{{bank.name}}</h1>
         <span>{{bank.account.name}}</span>
         <span>{{bank.account.number}}</span>
-        {{#each accountRows}}
-            {{> accountRow}}
-        {{/each}}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Libelle</th>
+                    <th>Montant</th>
+                    <th>Tags</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each accountRows}}
+                    {{> accountRow}}
+                {{/each}}
+            </tbody>
+        </table>
     </div>
 </template>
