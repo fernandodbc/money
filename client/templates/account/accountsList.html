@@ -1,0 +1,18 @@
+<template name="accountsList">
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Banque</th>
+                    <th>Nom</th>
+                    <th>Montant Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each accounts}}
+                    {{> account}}
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>

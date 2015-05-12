@@ -1,8 +1,9 @@
 <template name="accountRow">
-    <tr class="account-row">
-        <th scope="row">{{time}}</th>
-        <td><a href="{{title}}">{{title}}</a></td>
-        <td>{{value}}</td>
-        <td>{{tags}}</td>
+    <tr id="row['{{_id}}']" class="account-row">
+        <td><input type="date" name="time" value="{{time}}"></td>
+        <td><input type="text" name="title" value="{{title}}"></td>
+        <td><input type="number" name="value" value="{{value}}"></td>
+        <td><input type="text" name="tags" value="{{tags}}"></td>
+        <td><button type="submit" class="btn btn-primary submit-row">Valider</button></td>
     </tr>
 </template>

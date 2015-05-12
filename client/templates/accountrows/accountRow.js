@@ -1,3 +1,0 @@
-Template.accountRow.helpers({
-    
-});
