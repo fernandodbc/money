@@ -1,11 +1,12 @@
-<template name="accountsList">
+<template name="accountList">
     <div>
+      <a class="btn btn-success" href="{{pathFor 'accountNew'}}"><i class="glyphicon glyphicon-plus"></i> Créer un compte</a>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Banque</th>
                     <th>Nom</th>
-                    <th>Montant Total</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>

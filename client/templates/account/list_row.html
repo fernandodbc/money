@@ -1,0 +1,10 @@
+<template name="account">
+    <tr>
+        <td>{{bank}}</td>
+        <td>{{name}}</td>
+        <td>
+          <a href="{{pathFor 'accountEdit'}}" title="Editer" class="btn btn-primary" ><i class="glyphicon glyphicon-pencil"></i></a>
+          <a href="{{pathFor 'accountRowsList'}}" title="Afficher Ligne" class="btn btn-default" ><i class="glyphicon glyphicon-th-list"></i></a>
+        </td>
+    </tr>
+</template>

@@ -1,0 +1,12 @@
+<template name="accountRow">
+    <tr id="row['{{_id}}']" class="account-row">
+        <td><input type="date" name="time" value="{{time}}"  placeholder="aaaa-mm-jj"></td>
+        <td><input type="text" name="title" value="{{title}}" placeholder="Libellé"></td>
+        <td><input type="number" name="value" value="{{value}}" placeholder="000.00"></td>
+        <td><input type="text" name="tags" value="{{tags}}" placeholder="mot clé 1, mot clé 2 ..."></td>
+        <td>
+          <button type="submit" class="btn btn-sm btn-primary edit-row"><i class="glyphicon glyphicon-ok"></i></button>
+          <button type="button" class="btn btn-sm btn-danger remove-row"><i class="glyphicon glyphicon-trash"></i></button>
+        </td>
+    </tr>
+</template>

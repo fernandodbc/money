@@ -1,5 +1,5 @@
 // create an account
-Template.accountNewEdit.events({
+Template.accountNew.events({
     'submit form': function(e) {
         e.preventDefault();
 
@@ -8,7 +8,11 @@ Template.accountNewEdit.events({
           "name": $(e.target).find('[name=name]').val()
         };
 
-        account._id = Accounts.insert(account);
-        Router.go('accountsList', account);
+        Meteor.call('accountInsert', account, function(error, result){
+          if (error) {
+            alert(error.reason);
+          }
+          Router.go('accountList');
+        });
     }
 });

@@ -1,0 +1,17 @@
+<template name="accountEdit">
+  <form>
+    <div class="form-group">
+      <h1>Compte bancaire</h1>
+
+      <label for="bank">Banque</label>
+      <input type="text" class="form-control" id="bank" name="bank" value="{{bank}}" placeholder="Nom de la banque">
+
+      <label for="name">Nom</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{name}}" placeholder="Nom du compte">
+    </div>
+
+    <a href="{{pathFor 'accountList'}}" class="btn btn-default"><i class="glyphicon glyphicon-arrow-left"></i> Retour liste</a>
+    <button type="submit" class="btn btn-primary">Mettre à jour</button>
+    <a class="btn btn-danger delete" href="#">Supprimer</a>
+  </form>
+</template>
