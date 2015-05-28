@@ -2,7 +2,7 @@
 // return all the rows of the database
 var accountRowsData = function() {
     var user = Meteor.user();
-    return AccountRows.find({userId: user._id}, {sort: {time:-1}});
+    return AccountRows.find({userId: user._id, accountId : Router.current().params._id}, {sort: {time:-1}});
 };
 
 // and send data to the template named : accountRowsList
@@ -22,7 +22,9 @@ Template.accountRowsList.events({
     'click .edit-row': function(e) {
         e.preventDefault();
         var inputs = $(e.target).parents('tr').find('input');
-        var accountRow = {};
+        var accountRow = {
+          accountId : Router.current().params._id
+        };
 
         inputs.each(function(index) {
           accountRow[$(this).prop('name')] = $(this).val();
